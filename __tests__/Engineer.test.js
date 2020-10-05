@@ -7,6 +7,15 @@ test('creates a manager object', () => {
   expect(engineer.email).toEqual(expect.stringContaining('@'));
   expect(engineer.id).toEqual(expect.any(Number));
   expect(engineer.role).toBe('Engineer');
-  expect(engineer.github).toEqual(expect.stringContaining('github'))
+  expect(engineer.other).toEqual(expect.stringContaining('github'))
 });
 
+test('verify github', ()=> {
+  const employee = new Engineer('Brian Garstka', 'brian@tests.com', 345, 'Engineer', 'github.com/brian-garstka');
+  expect(employee.getGithub()).toEqual(expect.stringContaining('github'));
+});
+
+test('verify role', () => {
+  const employee = new Engineer('Brian Garstka', 'brian@tests.com', 345, 'Engineer', 'github.com/brian-garstka');
+  expect(employee.getRole()).toBe('Engineer');
+});

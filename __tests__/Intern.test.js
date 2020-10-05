@@ -10,3 +10,13 @@ test('creates a manager object', () => {
   expect(intern.school).toEqual(expect.any(String))
 });
 
+
+test('verify github', ()=> {
+  const intern = new Intern('John', 'joh @tests.com', 234, 'Intern',"UofU");
+  expect(intern.getSchool()).toEqual(expect.stringContaining('UofU'));
+});
+
+test('verify role', () => {
+  const intern = new Intern('John', 'joh @tests.com', 234, 'Intern',"UofU");
+  expect(intern.getRole()).toBe('Intern');
+});
