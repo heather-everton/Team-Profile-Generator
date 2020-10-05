@@ -1,0 +1,24 @@
+
+.header {
+    background-color: rgb(245, 247, 155);
+    border: solid black;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Bungee Shade', cursive;  
+}
+.container-body {
+    display: flex;
+    justify-content: space-evenly;
+}
+.card {
+    background-color:rgb(255, 255, 255);
+    margin-top: 4%;
+    border: solid black;
+    font-size: x-large;
+}
+.card-header{
+    margin: 10%;
+}
+.card-body{
+    margin: 5%;
+}
